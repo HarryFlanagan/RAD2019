@@ -1,0 +1,58 @@
+﻿@model RAD2019ClassLibrary.Models.Account
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Account</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FK_AccountType.TypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FK_AccountType.TypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FK_Customer.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FK_Customer.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InceptionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InceptionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentBalance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentBalance)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AccountID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
